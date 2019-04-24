@@ -191,6 +191,17 @@
       "required": true,
       "immutable": false,
       "group_name": "virtualmachine"
+    },
+    {
+      "name": "datastore_id",
+      "type": "string",
+      "description": "",
+      "hidden": true,
+      "label": "",
+      "secured": false,
+      "required": true,
+      "immutable": false,
+      "group_name": "virtualmachine"
     }
   ],
   "template_output_params": []
