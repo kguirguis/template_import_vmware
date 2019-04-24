@@ -66,6 +66,10 @@ variable "disk_0_datastore_id" {
   description = ""
 }
 
+variable "datastore_id" {
+  description = ""
+}
+
 # vsphere vm
 resource "vsphere_virtual_machine" "vm_1" {
   name             = "${var.name}"
@@ -76,6 +80,7 @@ resource "vsphere_virtual_machine" "vm_1" {
   resource_pool_id = "${var.resource_pool_id}"
   guest_id         = "${var.guest_id}"
   scsi_type        = "${var.scsi_type}"
+  datastore_id     = "${var.datastore_id}"
 
   network_interface {
     network_id   = "${var.network_interface_0_network_id}"
