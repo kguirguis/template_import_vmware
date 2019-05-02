@@ -78,7 +78,7 @@ variable "datastore_id" {
   description = ""
 }
 
-variable "template_uuid" {
+variable "clone_0_template_uuid" {
   description = "template uuid"
 }
 
@@ -110,7 +110,7 @@ resource "vsphere_virtual_machine" "vm_1" {
   }
   
   clone {
-    template_uuid = "${var.template_uuid}"
+    template_uuid = "${var.clone_0_template_uuid}"
     
     customize {
       network_interface {
