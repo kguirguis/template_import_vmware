@@ -79,7 +79,7 @@ variable "datastore_id" {
 }
 
 variable "template_uuid" {
-  description "template uuid"
+  description = "template uuid"
 }
 
 # vsphere vm
