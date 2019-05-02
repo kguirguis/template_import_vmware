@@ -215,7 +215,7 @@
       "group_name": "virtualmachine"
     },
     {
-      "name": "network_interface_1_ipv4_address",
+      "name": "clone_0_customize_0_network_interface_0_ipv4_address",
       "type": "string",
       "description": "",
       "hidden": true,
@@ -226,7 +226,7 @@
       "group_name": "virtualmachine"
     },
     {
-      "name": "network_interface_1_ipv4_netmask",
+      "name": "clone_0_customize_0_network_interface_0_ipv4_netmask",
       "type": "string",
       "description": "",
       "hidden": true,
