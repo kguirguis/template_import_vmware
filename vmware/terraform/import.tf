@@ -50,9 +50,9 @@ variable "network_interface_0_ipv4_address" {
   description = "IPv4 address"
 }
 
-variable "network_interface_0_ipv4_netmask" {
-  description = "IPv4 netmask"
-}
+# variable "network_interface_0_ipv4_netmask" {
+#   description = "IPv4 netmask"
+# }
 
 variable "disk_0_unit_number" {
   description = ""
@@ -94,7 +94,7 @@ resource "vsphere_virtual_machine" "vm_1" {
     network_id   = "${var.network_interface_0_network_id}"
     adapter_type = "${var.network_interface_0_adapter_type}"
     ipv4_address = "${var.network_interface_0_ipv4_address}"
-    ipv4_netmask = "${var.network_interface_0_ipv4_netmask}"
+#     ipv4_netmask = "${var.network_interface_0_ipv4_netmask}"
   }
 
   disk {
