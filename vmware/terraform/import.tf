@@ -46,11 +46,11 @@ variable "network_interface_0_adapter_type" {
   description = "Network adapter type for vNIC Configuration"
 }
 
-variable "network_interface_ipv4_address" {
+variable "network_interface_1_ipv4_address" {
   description = "IPv4 address"
 }
 
-variable "network_interface_ipv4_netmask" {
+variable "network_interface_1_ipv4_netmask" {
   description = "IPv4 netmask"
 }
 
@@ -113,8 +113,10 @@ resource "vsphere_virtual_machine" "vm_1" {
     template_uuid = "${var.template_uuid}"
     
     customize {
-      ipv4_address = "${var.network_interface_ipv4_address}"
-      ipv4_netmask = "${var.network_interface_ipv4_netmask}"
+      network_interface {
+       ipv4_address = "${var.network_interface_1_ipv4_address}"
+       ipv4_netmask = "${var.network_interface_1_ipv4_netmask}" 
+      }
     }
   }
 }
