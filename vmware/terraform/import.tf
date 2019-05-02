@@ -46,13 +46,13 @@ variable "network_interface_0_adapter_type" {
   description = "Network adapter type for vNIC Configuration"
 }
 
-variable "network_interface_0_ipv4_address" {
+variable "network_interface_ipv4_address" {
   description = "IPv4 address"
 }
 
-# variable "network_interface_0_ipv4_netmask" {
-#   description = "IPv4 netmask"
-# }
+variable "network_interface_ipv4_netmask" {
+  description = "IPv4 netmask"
+}
 
 variable "disk_0_unit_number" {
   description = ""
@@ -78,6 +78,10 @@ variable "datastore_id" {
   description = ""
 }
 
+variable "template_uuid" {
+  description "template uuid"
+}
+
 # vsphere vm
 resource "vsphere_virtual_machine" "vm_1" {
   name             = "${var.name}"
@@ -93,7 +97,7 @@ resource "vsphere_virtual_machine" "vm_1" {
   network_interface {
     network_id   = "${var.network_interface_0_network_id}"
     adapter_type = "${var.network_interface_0_adapter_type}"
-    ipv4_address = "${var.network_interface_0_ipv4_address}"
+#     ipv4_address = "${var.network_interface_0_ipv4_address}"
 #     ipv4_netmask = "${var.network_interface_0_ipv4_netmask}"
   }
 
@@ -103,6 +107,15 @@ resource "vsphere_virtual_machine" "vm_1" {
     label = "${var.disk_0_label}"
     size = "${var.disk_0_size}"
     datastore_id = "${var.disk_0_datastore_id}"
+  }
+  
+  clone {
+    template_uuid = "${var.template_uuid}"
+    
+    customize {
+      ipv4_address = "${var.network_interface_ipv4_address}"
+      ipv4_netmask = "${var.network_interface_ipv4_netmask}"
+    }
   }
 }
 
