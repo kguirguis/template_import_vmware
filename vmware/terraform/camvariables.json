@@ -237,7 +237,7 @@
       "group_name": "virtualmachine"
     },
     {
-      "name": "template_uuid",
+      "name": "clone_0_template_uuid",
       "type": "string",
       "description": "",
       "hidden": true,
