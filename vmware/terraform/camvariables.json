@@ -300,7 +300,8 @@
       "secured": false,
       "required": false,
       "immutable": false,
-      ",
+      "group_name": "virtualmachine"
+    },
     {
       "name": "ipv4_prefix_length",
       "type": "string",
@@ -310,7 +311,8 @@
       "secured": false,
       "required": false,
       "immutable": false,
-      "
+      "group_name": "virtualmachine"
+    }
   ],
   "template_output_params": []
 }
