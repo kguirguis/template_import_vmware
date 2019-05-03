@@ -303,7 +303,7 @@
       "group_name": "virtualmachine"
     },
     {
-      "name": "ipv4_prefix_length",
+      "name": "network_interface_0_ipv4_prefix_length",
       "type": "string",
       "description": "",
       "hidden": true,
