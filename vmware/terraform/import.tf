@@ -78,7 +78,15 @@ variable "datastore_id" {
   description = ""
 }
 
-variable "default_ip_address" {
+variable "network_interface_0_ipv4_address" {
+  description = ""
+}
+
+variable "network_interface_0_ipv4_netmask" {
+  description = ""
+}
+
+variable = "ipv4_prefix_length" {
   description = ""
 }
 
@@ -109,11 +117,13 @@ resource "vsphere_virtual_machine" "vm_1" {
   guest_id         = "${var.guest_id}"
   scsi_type        = "${var.scsi_type}"
   datastore_id     = "${var.datastore_id}"
-  default_ip_address = "${var.default_ip_address}"
 
   network_interface {
     network_id   = "${var.network_interface_0_network_id}"
     adapter_type = "${var.network_interface_0_adapter_type}"
+    ipv4_address = "${network_interface_0_ipv4_address}"
+    ipv4_netmast = "${network_interface_0_ipv4_netmask}"
+    ipv4_prefix_length = "${var.ipv4_prefix_length}"
   }
 
   disk {
