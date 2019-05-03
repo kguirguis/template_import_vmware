@@ -86,7 +86,7 @@ variable "network_interface_0_ipv4_netmask" {
   description = ""
 }
 
-variable = "ipv4_prefix_length" {
+variable "ipv4_prefix_length" {
   description = ""
 }
 
