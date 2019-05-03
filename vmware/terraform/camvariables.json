@@ -281,7 +281,7 @@
       "group_name": "virtualmachine"
     },
     {
-      "name": "default_ip_address",
+      "name": "network_interface_0_ipv4_address",
       "type": "string",
       "description": "",
       "hidden": true,
@@ -290,7 +290,27 @@
       "required": false,
       "immutable": false,
       "group_name": "virtualmachine"
-    }
+    },
+    {
+      "name": "network_interface_0_ipv4_netmask",
+      "type": "string",
+      "description": "",
+      "hidden": true,
+      "label": "",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      ",
+    {
+      "name": "ipv4_prefix_length",
+      "type": "string",
+      "description": "",
+      "hidden": true,
+      "label": "",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      "
   ],
   "template_output_params": []
 }
