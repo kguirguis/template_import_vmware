@@ -86,7 +86,7 @@ variable "network_interface_0_ipv4_netmask" {
   description = ""
 }
 
-variable "ipv4_prefix_length" {
+variable "network_interface_0_ipv4_prefix_length" {
   description = ""
 }
 
@@ -122,8 +122,8 @@ resource "vsphere_virtual_machine" "vm_1" {
     network_id   = "${var.network_interface_0_network_id}"
     adapter_type = "${var.network_interface_0_adapter_type}"
     ipv4_address = "${var.network_interface_0_ipv4_address}"
-    ipv4_netmast = "${var.network_interface_0_ipv4_netmask}"
-    ipv4_prefix_length = "${var.ipv4_prefix_length}"
+    ipv4_netmask = "${var.network_interface_0_ipv4_netmask}"
+    ipv4_prefix_length = "${var.network_interface_0_ipv4_prefix_length}"
   }
 
   disk {
