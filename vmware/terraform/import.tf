@@ -46,13 +46,13 @@ variable "network_interface_0_adapter_type" {
   description = "Network adapter type for vNIC Configuration"
 }
 
-variable "clone_0_customize_0_network_interface_0_ipv4_address" {
-  description = "IPv4 address"
-}
+# variable "clone_0_customize_0_network_interface_0_ipv4_address" {
+#   description = "IPv4 address"
+# }
 
-variable "clone_0_customize_0_network_interface_0_ipv4_netmask" {
-  description = "IPv4 netmask"
-}
+# variable "clone_0_customize_0_network_interface_0_ipv4_netmask" {
+#   description = "IPv4 netmask"
+# }
 
 variable "disk_0_unit_number" {
   description = ""
@@ -78,21 +78,21 @@ variable "datastore_id" {
   description = ""
 }
 
-variable "clone_0_template_uuid" {
-  description = "template uuid"
-}
+# variable "clone_0_template_uuid" {
+#   description = "template uuid"
+# }
 
-variable "clone_0_customize_0_ipv4_gateway" {
-  description = "IPv4 Gateway"
-}
+# variable "clone_0_customize_0_ipv4_gateway" {
+#   description = "IPv4 Gateway"
+# }
 
-variable "clone_0_customize_0_linux_options_host_name" {
-  description = "host name"
-}
+# variable "clone_0_customize_0_linux_options_host_name" {
+#   description = "host name"
+# }
 
-variable "clone_0_customize_0_linux_options_domain" {
-  description = "domain"
-}
+# variable "clone_0_customize_0_linux_options_domain" {
+#   description = "domain"
+# }
 
 # vsphere vm
 resource "vsphere_virtual_machine" "vm_1" {
@@ -119,21 +119,21 @@ resource "vsphere_virtual_machine" "vm_1" {
     datastore_id = "${var.disk_0_datastore_id}"
   }
   
-  clone {
-    template_uuid = "${var.clone_0_template_uuid}"
+#   clone {
+#     template_uuid = "${var.clone_0_template_uuid}"
     
-    customize {
-      linux_options {
-        host_name = "${var.clone_0_customize_0_linux_options_host_name}"
-        domain    = "${var.clone_0_customize_0_linux_options_domain}"
-      }
+#     customize {
+#       linux_options {
+#         host_name = "${var.clone_0_customize_0_linux_options_host_name}"
+#         domain    = "${var.clone_0_customize_0_linux_options_domain}"
+#       }
       
-      network_interface {
-        ipv4_address = "${var.clone_0_customize_0_network_interface_0_ipv4_address}"
-        ipv4_netmask = "${var.clone_0_customize_0_network_interface_0_ipv4_netmask}" 
-      }
+#       network_interface {
+#         ipv4_address = "${var.clone_0_customize_0_network_interface_0_ipv4_address}"
+#         ipv4_netmask = "${var.clone_0_customize_0_network_interface_0_ipv4_netmask}" 
+#       }
 
-      ipv4_gateway = "${var.clone_0_customize_0_ipv4_gateway}"
-    }
-  }
+#       ipv4_gateway = "${var.clone_0_customize_0_ipv4_gateway}"
+#     }
+#   }
 }
