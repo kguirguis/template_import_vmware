@@ -121,8 +121,8 @@ resource "vsphere_virtual_machine" "vm_1" {
   network_interface {
     network_id   = "${var.network_interface_0_network_id}"
     adapter_type = "${var.network_interface_0_adapter_type}"
-    ipv4_address = "${network_interface_0_ipv4_address}"
-    ipv4_netmast = "${network_interface_0_ipv4_netmask}"
+    ipv4_address = "${var.network_interface_0_ipv4_address}"
+    ipv4_netmast = "${var.network_interface_0_ipv4_netmask}"
     ipv4_prefix_length = "${var.ipv4_prefix_length}"
   }
 
