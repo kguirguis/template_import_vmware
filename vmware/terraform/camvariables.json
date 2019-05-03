@@ -246,6 +246,39 @@
       "required": false,
       "immutable": false,
       "group_name": "virtualmachine"
+    },
+    {
+      "name": "clone_0_customize_0_ipv4_gateway",
+      "type": "string",
+      "description": "",
+      "hidden": true,
+      "label": "",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "clone_0_customize_0_linux_options_host_name",
+      "type": "string",
+      "description": "",
+      "hidden": true,
+      "label": "",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      "group_name": "virtualmachine"
+    },
+    {
+      "name": "clone_0_customize_0_linux_options_domain",
+      "type": "string",
+      "description": "",
+      "hidden": true,
+      "label": "",
+      "secured": false,
+      "required": false,
+      "immutable": false,
+      "group_name": "virtualmachine"
     }
   ],
   "template_output_params": []
