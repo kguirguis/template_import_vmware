@@ -78,6 +78,10 @@ variable "datastore_id" {
   description = ""
 }
 
+variable "default_ip_address" {
+  description = ""
+}
+
 # variable "clone_0_template_uuid" {
 #   description = "template uuid"
 # }
